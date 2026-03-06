@@ -112,16 +112,10 @@
                     <div class="w-20 h-1 bg-pink-400 mx-auto rounded-full mb-8"></div>
                 </div>
                 <div class="video-container bg-pink-100 flex items-center justify-center">
-                    <!-- Placeholder for video if none is provided -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-                        <div class="w-20 h-20 bg-pink-500/20 rounded-full flex items-center justify-center mb-6 animate-pulse">
-                            <svg class="w-10 h-10 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-pink-600 mb-2">Reserved for Your Special Video</h3>
-                        <p class="text-pink-500/70">A compilation of your best moments will be here.</p>
-                    </div>
+                    <video controls>
+                        <source src="video/my-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>
