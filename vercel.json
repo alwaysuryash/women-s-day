@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "./gallery.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "./letter.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "./assets/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "./api/notify.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/notify",
+      "dest": "/api/notify.js"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/gallery",
+      "dest": "/gallery.html"
+    },
+    {
+      "src": "/letter",
+      "dest": "/letter.html"
+    }
+  ]
+}

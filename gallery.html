@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gallery of My Bhanu | Happy Women's Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fffafb;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .img-card {
+            transition: all 0.4s ease;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .img-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 117, 140, 0.3);
+        }
+        .img-card img {
+            transition: all 0.4s ease;
+        }
+        .img-card:hover img {
+            transform: scale(1.1);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ff758c;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-100 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold gradient-text">To My Bhanu ❤️</div>
+        <div class="space-x-8 hidden md:flex">
+            <a href="index.html" class="text-gray-600 hover:text-pink-500 transition-colors">Home</a>
+            <a href="gallery.html" class="text-pink-600 font-semibold border-b-2 border-pink-500 pb-1">Gallery</a>
+            <a href="letter.html" class="text-gray-600 hover:text-pink-500 transition-colors">Letter</a>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-20 px-4">
+        <section class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-pink-500 font-semibold tracking-widest uppercase text-sm mb-4 block">Capturing Moments</span>
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">Your Beautiful <span class="gradient-text">Radiance</span></h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    A collection of memories, your smile, and the light you bring into my life. Each image is a testament to the wonderful person you are.
+                </p>
+                <button onclick="celebrate()" class="mt-8 bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-bold shadow-lg transition-all flex items-center mx-auto gap-2">
+                    <span>Click to Celebrate!</span> 🎉
+                </button>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mb-24">
+                <div class="img-card group">
+                    <img src="bhanu_1.png" alt="Bhanu 1" class="w-full h-full object-cover aspect-[3/4]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">Always inspiring ❤️</p>
+                    </div>
+                </div>
+                <div class="img-card group">
+                    <img src="bhanu_2.png" alt="Bhanu 2" class="w-full h-full object-cover aspect-[3/4]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">Pure Elegance ✨</p>
+                    </div>
+                </div>
+                <div class="img-card group">
+                    <img src="bhanu_3.png" alt="Bhanu 3" class="w-full h-full object-cover aspect-[3/4]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold text-lg">The Strongest Bhanu 💪</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">A Special Video for You</h2>
+                    <div class="w-20 h-1 bg-pink-400 mx-auto rounded-full mb-8"></div>
+                </div>
+                <div class="video-container bg-pink-100 flex items-center justify-center">
+                    <!-- Placeholder for video if none is provided -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+                        <div class="w-20 h-20 bg-pink-500/20 rounded-full flex items-center justify-center mb-6 animate-pulse">
+                            <svg class="w-10 h-10 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-pink-600 mb-2">Reserved for Your Special Video</h3>
+                        <p class="text-pink-500/70">A compilation of your best moments will be here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 border-t border-pink-100 text-center text-gray-500">
+        <p>Made with ❤️ for Bhanu by Yash | March 8, 2026</p>
+    </footer>
+
+    <script>
+        // Function to send notification
+        async function sendNotification(event) {
+            try {
+                await fetch('/api/notify', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ event: event }),
+                });
+            } catch (error) {
+                console.error('Failed to send notification:', error);
+            }
+        }
+
+        function celebrate() {
+            const count = 200;
+            const defaults = {
+                origin: { y: 0.7 },
+                colors: ['#ff758c', '#ff7eb3', '#ffc3a0', '#ffffff']
+            };
+
+            function fire(particleRatio, opts) {
+                confetti({
+                    ...defaults,
+                    ...opts,
+                    particleCount: Math.floor(count * particleRatio)
+                });
+            }
+
+            fire(0.25, { spread: 26, startVelocity: 55 });
+            fire(0.2, { spread: 60 });
+            fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+            fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+            fire(0.1, { spread: 120, startVelocity: 45 });
+        }
+
+        // Run initial celebration and send notification
+        window.onload = () => {
+            sendNotification('photos_viewed');
+            setTimeout(celebrate, 1000);
+        };
+    </script>
+</body>
+</html>

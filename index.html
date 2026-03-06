@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy International Women's Day | For My Bhanu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fffafb;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .flower-anim {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.2;
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .nav-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 117, 140, 0.2);
+        }
+        .nav-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 117, 140, 0.4);
+        }
+        .quote-card {
+            border-left: 4px solid #ff758c;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Background elements -->
+    <div class="flower-anim top-0 right-0 w-64 h-64">🌸</div>
+    <div class="flower-anim bottom-0 left-0 w-64 h-64">🌹</div>
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-100 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold gradient-text">To My Bhanu ❤️</div>
+        <div class="space-x-8 hidden md:flex">
+            <a href="index.html" class="text-pink-600 font-semibold border-b-2 border-pink-500 pb-1">Home</a>
+            <a href="gallery.html" class="text-gray-600 hover:text-pink-500 transition-colors">Gallery</a>
+            <a href="letter.html" class="text-gray-600 hover:text-pink-500 transition-colors">Letter</a>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="min-h-[80vh] flex flex-col items-center justify-center text-center px-4 relative">
+            <div class="max-w-4xl mx-auto">
+                <span class="text-pink-500 font-semibold tracking-widest uppercase text-sm mb-4 block">Happy International Women's Day</span>
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6 leading-tight">
+                    Celebrating the <span class="gradient-text">Incredible Woman</span> You Are
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Today is a celebration of your strength, your grace, and the beautiful impact you have on everyone around you. You are truly one of a kind.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="gallery.html" class="nav-btn bg-gradient-to-r from-pink-500 to-rose-400 text-white px-10 py-4 rounded-full font-bold text-lg">
+                        See Your Magic
+                    </a>
+                    <a href="letter.html" class="nav-btn bg-white text-pink-500 border-2 border-pink-200 px-10 py-4 rounded-full font-bold text-lg">
+                        Read My Heart
+                    </a>
+                </div>
+            </div>
+            <div class="mt-16 floating">
+                <svg class="w-10 h-10 text-pink-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-24 text-center bg-white">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Ready to see your special celebration?</h2>
+            <div class="flex justify-center gap-6">
+                <a href="gallery.html" class="text-pink-600 font-bold hover:underline">View Gallery →</a>
+                <a href="letter.html" class="text-pink-600 font-bold hover:underline">Read Letter →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 border-t border-pink-100 text-center text-gray-500">
+        <p>Made with ❤️ for Bhanu by Yash | March 8, 2026</p>
+    </footer>
+
+    <script>
+        // Function to send notification
+        async function sendNotification(event) {
+            try {
+                await fetch('/api/notify', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ event: event }),
+                });
+            } catch (error) {
+                console.error('Failed to send notification:', error);
+            }
+        }
+
+        // Notify when the link is first opened
+        window.onload = () => {
+            sendNotification('link_opened');
+        };
+
+        // Smooth scroll if needed
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

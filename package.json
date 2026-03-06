@@ -1,0 +1,7 @@
+{
+  "name": "womens-day-website",
+  "version": "1.0.0",
+  "dependencies": {
+    "resend": "^0.16.0"
+  }
+}

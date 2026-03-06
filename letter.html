@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter to Bhanu | Happy Women's Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fffafb;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .handwritten {
+            font-family: 'Dancing Script', cursive;
+        }
+        .letter-paper {
+            background-color: #fff;
+            background-image: radial-gradient(#f0f0f0 1.5px, transparent 1.5px);
+            background-size: 20px 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            position: relative;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            border-radius: 8px;
+            border-left: 10px solid #ff758c;
+        }
+        .disclaimer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 250, 251, 0.98);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        .disclaimer-content {
+            text-align: center;
+            max-width: 500px;
+            padding: 2rem;
+        }
+        .highlight {
+            background: linear-gradient(120deg, rgba(255, 117, 140, 0.2) 0%, rgba(255, 117, 140, 0.2) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.3em;
+            background-position: 0 88%;
+            font-weight: 600;
+            color: #d12e4d;
+        }
+        .fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff758c 0%, #ff7eb3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .letter-text {
+            line-height: 2;
+            color: #374151;
+            font-size: 1.125rem;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden min-h-screen">
+    <!-- Disclaimer Overlay -->
+    <div id="disclaimer" class="disclaimer-overlay">
+        <div class="disclaimer-content animate-fade-in">
+            <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-8">
+                <svg class="w-10 h-10 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 italic">A Message for You...</h2>
+            <p class="text-gray-600 mb-10 leading-relaxed text-lg">
+                I don't know if u have time for even reading this or opening this link at first, but this is what I want to say....
+            </p>
+            <button onclick="openLetter()" class="bg-gradient-to-r from-pink-500 to-rose-400 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                Open My Heart
+            </button>
+        </div>
+    </div>
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-100 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold gradient-text">To My Bhanu ❤️</div>
+        <div class="space-x-8 hidden md:flex">
+            <a href="index.html" class="text-gray-600 hover:text-pink-500 transition-colors">Home</a>
+            <a href="gallery.html" class="text-gray-600 hover:text-pink-500 transition-colors">Gallery</a>
+            <a href="letter.html" class="text-pink-600 font-semibold border-b-2 border-pink-500 pb-1">Letter</a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-4">
+        <div class="letter-paper">
+            <div class="absolute top-8 right-8 text-pink-400 font-semibold uppercase tracking-widest text-xs">
+                March 8, 2026
+            </div>
+            
+            <h1 class="text-4xl font-bold text-gray-800 mb-12 handwritten">To THE WOMAN....</h1>
+            
+            <div class="letter-text space-y-6">
+                <p>Hello, to the woman on the other side who is busy as a bee, working (running) between her job, studying to upscale her skills, taking care of her family, even making little time to work for her startup, battling with her past - present - future on her way to the top and there might be many things she might be going through alone...</p>
+                
+                <p>To the woman out there I am really proud of u, respect to your work, you are ONE of the two women I respect, love, admire you and what you are going through in your life.</p>
+                
+                <p>In my eys, My Bhanu in the future is <span class="font-bold">EXTRA STRONG, CONFIDENT, INSPIRING, carrying high SELF-ESTEEM</span>, be like that always. Do not lose hope, don't de-motivate, don't doubt yourself.</p>
+                
+                <p class="text-xl italic font-serif py-4 text-pink-700 text-center">
+                    "Everything has ever happened in your past, is to make you strong to this very moment"
+                </p>
+                
+                <p>At the end, everything is going to be fine and great. Be cool, don't stress out, take care of your health, have good sleep, be careful when you go out. You always have me if anything u want, I always be there for you, always love you for who you are.</p>
+                
+                <p>I know you are busy these days, i will stop messaging u, calling u, sending those voice notes from my side so that i won't take your time disturbing u.</p>
+            </div>
+            
+            <div class="mt-16 text-right">
+                <p class="handwritten text-3xl text-pink-600 mb-2">Signing off.....</p>
+                <p class="handwritten text-4xl text-pink-600 font-bold">always your yash ❤️</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-10 border-t border-pink-100 text-center text-gray-500">
+        <p>Made with ❤️ for Bhanu by Yash | March 8, 2026</p>
+    </footer>
+
+    <script>
+        // Function to send notification
+        async function sendNotification(event) {
+            try {
+                await fetch('/api/notify', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ event: event }),
+                });
+            } catch (error) {
+                console.error('Failed to send notification:', error);
+            }
+        }
+
+        function openLetter() {
+            const overlay = document.getElementById('disclaimer');
+            overlay.classList.add('fade-out');
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 800);
+            // Send notification when the letter is opened
+            sendNotification('letter_read');
+        }
+    </script>
+</body>
+</html>
